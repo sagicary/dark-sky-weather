@@ -19,7 +19,7 @@ var notFound = function(error){
 /*API DARK SKY*/ 
 
 function clima(latitud,longitud){
-	console.log(latitud); //pruebas
+	console.log(latitud); //pruebas otras
 	$.ajax({
 		url: 'https://api.darksky.net/forecast/c290dc0e0d6dec4c86f6d8417d5b5470/'+latitud+','+longitud+'?language=es?&units=auto',
 		type: 'GET',
