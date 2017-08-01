@@ -21,9 +21,9 @@ var notFound = function(error){
 function clima(latitud,longitud){
 	console.log(latitud); //pruebas otras
 	$.ajax({
-		url: 'https://api.darksky.net/forecast/c290dc0e0d6dec4c86f6d8417d5b5470/'+latitud+','+longitud+'?language=es?&units=auto',
+		url: 'https://api.darksky.net/forecast/c290dc0e0d6dec4c86f6d8417d5b5470/'+latitud+','+longitud+'?language=es?&units=auto&callback=?',
 		type: 'GET',
-		datatype: 'JSONP',
+		datatype: 'jsonp',
 	})
 	.done(function(data) {
             console.log(data);
