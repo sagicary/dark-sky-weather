@@ -17,7 +17,7 @@ gulp.task('style', function(){
 		.pipe(concat('style.min.css'))
 		.pipe(gulp.dest('dist/css/'));
 });
-gulp.task('webserver', function(){
+/*gulp.task('webserver', function(){
 	gulp.src('../dark-sky-weather/')
 	.pipe(webserver({
 		fallback: 'index.html',
@@ -25,8 +25,8 @@ gulp.task('webserver', function(){
 		directoryListing: false,
 		open: true
 	}));
-});
+});*/
 gulp.task('watch', function() {
     gulp.watch('assets/sass/*.scss', ['style']);
 });
-gulp.task('default', ['script','style','webserver','watch']);
+gulp.task('default', ['script','style','watch']);
