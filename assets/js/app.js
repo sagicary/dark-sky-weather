@@ -35,6 +35,14 @@ function clima(latitud,longitud){
             	'<h5 class="center-align">UV Index: '+data.currently.uvIndex+'</h5>'+
             	'<h5 class="center-align">Pressure: '+data.currently.pressure+'</h5>'+
             	'<a href="semana.html"><button class="btn" id="semana">PREDICCION DE LA SEMANA</button></a>');
+            //var largo = data.daily.data.length;
+            //console.log(largo);
+            for(var x=0; x<=6; x++){
+            	console.log(data.daily.data[x].temperatureMin);
+            	console.log(data.daily.data[x].temperatureMax);
+
+            }
+            console.log(data.daily.data[0].temperatureMin);
             $('.semana').append('<img src="dist/iconos/'+data.currently.icon+'.png">'+
             	'<h1 class="temp center-align">'+ data.currently.apparentTemperature+'</h1>'+
             	'<h5 class="center-align">Wind: '+data.currently.windSpeed+'</h5>'+
