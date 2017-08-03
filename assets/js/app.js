@@ -6,23 +6,23 @@ function ubicacion(){
 }
 window.addEventListener("load", ubicacion); 
 
-var lat, lon;
+var latitud, longitud;
 var found = function(posicion){
-	lat = posicion.coords.latitude;
-	lon = posicion.coords.longitude;
-	console.log(lat);
-	console.log(lon);
-	clima(lat,lon);
+	latitud = posicion.coords.latitude;
+	longitud = posicion.coords.longitude;
+	console.log(latitud);
+	console.log(longitud);
+	clima(latitud,longitud);
 }
 var notFound = function(error){
 	alert("No pudimos encontrar tu ubicación");
 }
 /*API DARK SKY*/ 
 
-function clima(lat,lon){
+function clima(latitud,longitud){
 	console.log(latitud); //pruebas
 	$.ajax({
-		url: 'https://api.darksky.net/forecast/c290dc0e0d6dec4c86f6d8417d5b5470/'+lat+','+lon+'?language=es?&units=auto',
+		url: 'https://api.darksky.net/forecast/c290dc0e0d6dec4c86f6d8417d5b5470/'+latitud+','+longitud+'?language=es?&units=auto',
 		//url: 'https://api.darksky.net/forecast/c290dc0e0d6dec4c86f6d8417d5b5470/-33.4727879,-70.6298313?language=es?&units=auto',
 		type: 'GET',
 		datatype: 'JSON',
